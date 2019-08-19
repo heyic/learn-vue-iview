@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //1. 基本用法
+
+    // // let name = "张三", age = 12, sex = "男"
+    // // console.log(name);
+    // // console.log(age);
+    // // console.log(sex);
+    // let [name, age, sex] = ["张三", 12, "男"]
+    // console.log(name);
+    // console.log(age);
+    // console.log(sex);
+
+
+    //2. 对象的解构赋值
+    // let {name, age, sex} = {name: "张三", age: 12, sex:"男"};
+    // console.log(name);
+    // console.log(age);
+    // console.log(sex);
+
+
+    //3. 数组的解构赋值
+    let[name, age, sex] = ["张三", 12, "M"]
+    console.log(name);
+    console.log(age);
+    console.log(sex);
+
+    let[ary1, [ary2, ary3], [ary4, ary5, ary6]] = [1, [2, 3], [4, 5, 6]];
+    console.log(ary1);
+    console.log(ary2);
+    console.log(ary3);
+    console.log(ary4);
+    console.log(ary5);
+    console.log(ary6);
+
+    //4. 基本类型的解构赋值
+    let[a, b, c, d, e] = "我是中国人";
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+</script>
+
+</body>
+</html>

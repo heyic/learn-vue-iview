@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //symbol解决的事情
+    //ES5对象的属性名是字符串，容易造成属性名成冲突
+    //ES6引入一个新的原始数据类型Symbol，表示独一无二
+    //ES6对象的属性名可以有俩种类型：字符串， Symbol
+
+    // 创建Symbol
+    let sym1 = Symbol("name");
+    let sym2 = Symbol("name");
+
+    console.log(sym1 === sym2)
+
+
+    let obj = {"age":12, "sex":"男"}
+    obj[Symbol("name")] = "heyc";
+    obj[Symbol("name")] = "heyc12";
+    console.log(obj);
+
+
+</script>
+</body>
+</html>

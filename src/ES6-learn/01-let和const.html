@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    //// **************let学习*************
+
+    // 01-作用域限于当前代码块
+    // {
+    //    let name = "zhansna";
+    //    console.log(name);
+    // }
+    //
+    // console.log(name);
+
+
+    // //02-使用let声明的变量作用域不会被提升
+    // {
+    //     console.log(name);
+    //     var name = "zhansan"
+    //
+    //     console.log(name1)
+    //     let name1 = "zhansna"
+    // }
+
+    //03-在相同的作用域下不能申请同名的变量
+    // {
+    //     let name = "zhansna"
+    //     let name = "lisi"
+    // }
+
+    //04-for循环体现父子作用域
+    // {
+    //     let i = 10;
+    //     for(let i = 0; i< 10; i++){
+    //         let i = 20;
+    //         console.log(i);
+    //     }
+    // }
+
+
+    //// **************const学习(用于声明常量)*************
+    //01-作用域限于当前代码块
+    //02-使用const声明的变量作用域不会被提升
+    //03-不能重复声明
+    //04-声明的常量必须赋值
+
+</script>
+
+</body>
+</html>

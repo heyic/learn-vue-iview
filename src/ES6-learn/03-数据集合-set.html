@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //1. 创建一个集合
+    let set = new Set(["张三", "李四", "王五", "王五"]);
+
+    console.log(set);
+
+    //2. 一个属性
+    console.log(set.size);
+
+    //4. 5个方法
+
+    //4.1 add方法
+    set.add("何以超").add("屠汉侠")
+    console.log(set);
+
+    //4.2 delete方法
+    set.delete("王五");
+    console.log(set);
+
+    //4.3 has方法
+    console.log(set.has("何以超"))
+
+    //4.4 forEach方法
+    set.forEach((vlaue)=>{
+        console.log(vlaue);
+    })
+
+    //4.4 clear方法
+    set.clear()
+
+</script>
+</body>
+</html>
