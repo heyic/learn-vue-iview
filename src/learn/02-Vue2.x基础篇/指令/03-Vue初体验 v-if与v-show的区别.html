@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+    <p v-if="show">v-if: {{message}}</p>
+    <p v-show = show>v-show: {{message}}}</p>
+    <button @click="show = !show">请点击</button>
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    //*******1. v-show与v-if的区别**************
+    //v-if使用注释来实现组件的销毁及重建，使用切换元素的 display CSS 属性实现组件的销毁及重建
+
+    //适用场景
+    //1. v-show一开始渲染页面时，所有的组件都会渲染出来，v-if不会，因此要想加快页面渲染使用v-if；
+    //2. v-if使用监听器来动态的添加注释、去除注释，消费性能，如果一个组件变化比较频繁，就使用v-show。
+
+    //专业解释
+    // 1.手段：v-if是动态的向DOM树内添加或者删除DOM元素；v-show是通过设置DOM元素的display样式属性控制显隐；
+    // 2.编译过程：v-if切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件；v-show只是简单的基于css切换；
+    // 3.编译条件：v-if是惰性的，如果初始条件为假，则什么也不做；只有在条件第一次变为真时才开始局部编译（编译被缓存？编译被缓存后，然后再切换的时候进行局部卸载); v-show是在任何条件下（首次条件是否为真）都被编译，然后被缓存，而且DOM元素保留；
+    // 4.性能消耗：v-if有更高的切换消耗；v-show有更高的初始渲染消耗；
+    // 5.使用场景：v-if适合运营条件不大可能改变；v-show适合频繁切换。
+
+
+    //1. 创建vue实例
+    let vm = new Vue({
+        el: "#app",
+        data: { //vue中的model
+            message: "今天天气真好啊",
+            show: true
+        }
+    });
+
+</script>
+</body>
+</html>

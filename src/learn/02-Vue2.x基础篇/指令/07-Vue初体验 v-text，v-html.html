@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+
+    <p v-text="msg"></p>
+
+    <div v-html="html"></div>
+
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+
+    //1. 创建vue实例
+    let vm = new Vue({
+        el: "#app",
+        data: { //vue中的model
+            msg: "今天天气真好！！！！！！",
+            html:'<button>请点击</button>'
+        }
+    });
+
+</script>
+</body>
+</html>

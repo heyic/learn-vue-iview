@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+
+    <p>初始值： {{msg}}</p>
+    <p>翻转值： {{msg.split('').reverse().join('')}}}</p>
+    <p>函数调用：{{reverse()}}</p>
+    <p>计算属性调用：{{reverse1}}</p>
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    //计算属性（computed）与方法（method）的区别
+//     一. 区别
+//     1. 计算属性的结果会被缓存，除非依赖的响应式属性变化才会重新计算。注意，如果某个依赖 (比如非响应式属性) 在该实例范畴之外，则计算属性是不会被更新的;方法不会被缓存。
+//
+//     二. 俩者适用的场景
+//      1.计算属性适用于通过经过大量计算获取的数据，该数据一旦被计算出来，改变的几率比较小。
+// 	    2. 一个数据经常被改变，适用于方法
+
+
+
+    //1. 创建vue实例
+    let vm = new Vue({
+        el: "#app",
+        data: { //vue中的model
+            msg: "Rose Jack"
+        },
+        methods: {
+            reverse(){
+                return this.msg.split('').reverse().join('');
+            }
+        },
+        computed: {
+            reverse1() {
+                return this.msg.split('').reverse().join('');
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

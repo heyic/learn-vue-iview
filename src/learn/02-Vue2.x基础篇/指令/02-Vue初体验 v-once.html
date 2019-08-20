@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+    <p v-once>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    //******v-once作用**************
+    //只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。
+
+
+    //1. 创建vue实例
+    let vm = new Vue({
+        el: "#app",
+        data: { //vue中的model
+            message: "今天天气真好啊"
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //1. 模板字符串
+
+    let  html = '<html><head></head><body>今天天气真好！！！！！！</body></html>'
+    console.log(html);
+
+    let hit = "适合敲代码12";
+    let test = "test12"
+    let html1 =
+                `<html>
+                    <head>
+                    </head>
+                    <body>
+                        <p>今天天气真好！！！！！！</p>
+                        <p>${hit}</p>
+                        <p class="${test}"></p>
+                    </body>
+                </html>`;
+    console.log(html1);
+
+
+    //2. 数组的拓展
+    //2.1 Array.from  将一个类数组对象或者可遍历对象转换成一个真正的数组
+    // 将set集合转换为数组
+    let set = new Set(["1", "2", "3"]);
+    console.log(set);
+
+    let arr = Array.from(set);
+    console.log(arr);
+
+    //2.2 Array.of 用于将一组值，转换为数组
+    let arr1 = Array.of("12", "23", ["12", 23], {});
+    console.log(arr1);
+
+
+    //3. 对象的拓展
+    //3.1 如果key和value是一样的，写一个就行了
+    let obj = {name: "hyc", "age":12};
+    console.log(obj);
+
+    let name = "hyc";
+    let age = 12;
+    let obj1 = {name, age}
+    console.log(obj1);
+
+    //3.2 Object.assign  将多个对象的属性合并
+    let result = Object.assign({name:"hyc", "age":12}, {name1:"hyc1"}, {name2:"hyc2"});
+    console.log(result);
+
+
+    //4. 延展操作符
+    let str = "今天天气很好";
+    let strArr = [...str];
+    console.log(strArr);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+
+   <div>
+       <p>遍历数组</p>
+       <p v-for="a, index in arr">
+           {{index}} : {{a}}
+       </p>
+   </div>
+
+    <div>
+        <p>遍历对象</p>
+        <p v-for="p, key, index in person">
+            {{index}} : {{key}} : {{p}}
+        </p>
+    </div>
+
+
+
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    //******v-else作用**************
+   // 基于源数据多次渲染元素或模板块
+
+
+    //1. 创建vue实例
+    let vm = new Vue({
+        el: "#app",
+        data: { //vue中的model
+            arr: ["hyc", "12", "男"],
+            person:{
+                name: "hyc",
+                sex:"男",
+                age: 12
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
